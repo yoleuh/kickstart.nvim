@@ -614,6 +614,7 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
+        java_language_server = {},
         -- clangd = {},
         -- gopls = {},
         pyright = {},
@@ -712,7 +713,6 @@ require('lazy').setup({
         typescript = { 'prettier' },
         javascriptreact = { 'prettier' },
         typescriptreact = { 'prettier' },
-        svelte = { 'prettier' },
         css = { 'prettier' },
         html = { 'prettier' },
         json = { 'prettier' },
@@ -938,7 +938,7 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  require 'kickstart.plugins.debug',
+  -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
@@ -984,4 +984,3 @@ require('lazy').setup({
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-j>', '26j', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-k>', '26k', { noremap = true, silent = true })
-
